@@ -1,0 +1,6 @@
+<h2>Students by Classroom - Room {{classroom}}</h2>
+<ul>
+  <li data-ng-repeat="student in students | filter:classroom | orderBy:'name'">
+    {{student.name}} earned a grade of {{student.grade}}.
+  </li>
+</ul>

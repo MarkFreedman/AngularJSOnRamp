@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html data-ng-app>
+  <head>
+    <title>Controller Example</title>
+  </head>
+  <body>
+
+    <div data-ng-controller="studentController">
+      <ul>
+        <li data-ng-repeat="student in students">
+          {{student.name}} is in classroom
+          {{student.classroom}}, and earned a grade of
+          {{student.grade}}.
+        </li>
+      </ul>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+    <script src="studentController.js"></script>
+  </body>
+</html>
