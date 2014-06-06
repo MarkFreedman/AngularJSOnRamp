@@ -1,11 +1,11 @@
 <h2>Students</h2>
 
-<collapsible label="filter">
-  Filter: <input type="text" data-ng-model="search.name">
-</collapsible>
+Filter: <input type="text" data-ng-model="search.name"><br/>
+
+Color: <input type="text" data-ng-model="chosenColor"><br/>
 
 <ul>
-  <li data-ng-click="displayStudentInfo(student)" data-ng-repeat="student in students | filter:search | orderBy:'grade':true">
+  <li colorize color="chosenColor" data-ng-click="displayStudentInfo(student)" data-ng-repeat="student in students | filter:search | orderBy:'grade':true">
     {{student.name}} is in classroom
     {{student.classroom}}, and earned a grade of
     {{student.grade}}.
